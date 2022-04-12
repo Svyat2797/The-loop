@@ -32,8 +32,21 @@ body {
     padding: 17px 25px;
     text-decoration: none;
     text-transform: uppercase;
+    &-xs {
+        padding: 5px 29px;
+    }
+    &-center {
+        display: block;
+        margin: 0 auto;
+        width: 220px;
+        height: 22px;
+        text-align: center;
+        span {
+            margin-right: 9px;
+        }
+       
+    }
 }
-
 
 .page  {
     &_header {
@@ -86,7 +99,7 @@ body {
     &_main {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 133px;
+        padding-bottom: 125px;
         
     }
     &_sale {
@@ -131,11 +144,12 @@ body {
     background-color: $black;
     color: $white;
     text-align: center;
-    padding: 80px 0 69px 0;
+    padding: 80px 0 51px 0;
     &-title {
         font-weight: 400;
         font-size: 30px;
         text-transform: uppercase;
+        margin-top: 4px;
         span {
             font-weight: 700;
         }
@@ -146,4 +160,152 @@ body {
     }
 }
 
+.collection {
+    background-color: $cream;
+    &_wrraper {
+        display: flex;
+        justify-content: space-between;
+           
+    }
+    &_item  {
+        flex: 0 0 49%;
+        padding-top: 42px; 
+        padding-bottom: 60px; 
+        &-man {
+            background: url('../img/man.png') no-repeat ;
+            background-size: 190px 171px;
+            background-position:  calc(100% - 24px) bottom;
+        }
+        &-woman {
+            background: url('../img/woman.png') no-repeat ;
+            background-size: 190px 171px;
+            background-position:  calc(100% - 33px) bottom;
+        }
+    }
+    &_title {
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        span {
+            font-weight: 500;
+        }
+    }
+    &_descr {
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 36px;
+    }
+   
+}
 
+.model {
+    padding-top: 126px;
+    padding-bottom: 150px;
+    &_title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+    }
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 57px;
+    }
+    &_item {
+        flex: 0 0 24%;
+        &::before,&::after {
+            content: '';
+            width: 100%;
+            height: 25px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &::before {
+            background-image: url('../img/arrow-top.svg');
+        }
+        &::after {
+            background-image: url('../img/arrow-bottom.svg');
+        }
+        &-img {
+            margin-bottom: 25px;
+        }
+        &-descr {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        &-price {
+            font-weight: 700;
+            font-size: 18px;
+            color: $accent;
+        }
+        &_link {
+            span {
+                margin-right: 9px;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $black;
+    padding: 78px 0 80px 0;
+    &_wrrap {
+        display: flex;
+        align-items:flex-start;
+        justify-content: space-between;
+    }
+    
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex: 0 0 70%;
+    }
+    &_item {
+        list-style-type: none;
+        padding-left: 0;
+        
+        &-title {
+            font-weight: 700;
+            font-size: 10px;
+            color: $white;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        &-list {
+            margin-bottom: 10px;
+            a {
+                text-decoration: none;
+                color: $grey;
+            }
+            &-vk {
+                &::before {
+                    content: url('../img/vk.svg');
+                    background-repeat:no-repeat;
+                    background-size: 24px 24px;
+                    left: 0;
+                }
+            }
+            &-fb {
+                &::before {
+                    content: url('../img/fb.svg');
+                    background-repeat:no-repeat;
+                    background-size: 24px 24px;
+                    left: 0;
+                }
+            }
+            &-inst {
+                &::before {
+                    content: url('../img/inst.svg');
+                    background-repeat:no-repeat;
+                    background-size: 24px 24px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
